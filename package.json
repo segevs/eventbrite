@@ -1,0 +1,51 @@
+{
+  "name": "eventbrite2",
+  "version": "0.0.1",
+  "description": "An unofficial JavaScript SDK for the Eventbrite v3 API",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segevs/eventbrite2"
+  },
+  "bugs": {
+    "email": "bugs@segevs.com",
+    "url": "https://github.com/segevs/eventbrite2/issues"
+  },
+  "homepage": "https://github.com/segevs/eventbrite2/#readme",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+
+  },
+  "author": {
+    "name": "Segev {CJ} Shmueli",
+    "email": "cj@segevs.com",
+    "url": "https://segevs.com"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "sdk",
+    "events",
+    "tickets",
+    "eventbrite"
+  ],
+  "license": "ISC",
+  "dependencies": {},
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333",
+    "@types/jest": "^24.0.6",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0"
+  }
+}
